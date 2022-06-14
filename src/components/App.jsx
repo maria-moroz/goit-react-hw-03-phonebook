@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState !== this.state) {
+    if (prevState.contacts.length !== this.state.contacts.length) {
       localStorage.setItem(KEY_CONTACTS, JSON.stringify(this.state.contacts));
     }
   }
